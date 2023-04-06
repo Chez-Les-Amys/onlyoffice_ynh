@@ -143,7 +143,10 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8320CA65CB2DE8
 
 echo "deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee /etc/apt/sources.list.d/onlyoffice.list
 
-ynh_install_extra_app_dependencies --repo="https://download.onlyoffice.com/repo/debian squeeze main" --package=$extra_dependencies --key="https://ftp-master.debian.org/keys/release-$(lsb_release --release --short).asc"
+# ynh_install_extra_app_dependencies --repo="https://download.onlyoffice.com/repo/debian squeeze main" --package=$extra_dependencies --key="https://ftp-master.debian.org/keys/release-$(lsb_release --release --short).asc"
+
+sudo snap install onlyoffice-ds
+
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
